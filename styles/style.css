@@ -80,10 +80,14 @@ text-align: center;
 
 .intro_ {
 padding-left: 20px;
-text-align: center;
+text-align: justify;
+color: white;
 }
 
 .intro_ h2{
 color:white;
 font-size: 60px;
+text-align: center;
 }
+
+
