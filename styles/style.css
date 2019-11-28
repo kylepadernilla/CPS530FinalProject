@@ -90,4 +90,26 @@ font-size: 60px;
 text-align: center;
 }
 
+/*--------------*/
+/* installation */
 
+.codediv {
+  width: 800px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.instruction {
+  padding: 0.5em 0.5em;
+}
+
+pre {
+  text-align: left;
+  color: #fff;
+  background-color: #555;
+  border-radius: 2px;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 0.5em 0.5em;
+  border-left: 4px solid #8f8;
+}
