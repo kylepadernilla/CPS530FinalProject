@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!--Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <!--React -->
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <title>Introduction</title>
+
+
+</head>
+<body>
+<div class="top_nav">
+  <div class="diff_pages_nav">
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">
+        <a class="nav-link" href="../index.html" style="color:black;">Home</a>
+      </li>
+      <li class="list-group-item">
+        <a class="nav-link" href="../introduction.html">Introduction</a>
+      </li>
+      <li class="list-group-item active">
+        <a class="nav-link" href="../introduction.html">Installation</a>
+      </li>
+      <li class="list-group-item">
+        <a class="nav-link" href="../introduction.html">Tutorial</a>
+      </li>
+      <li class="list-group-item">
+        <a class="nav-link" href="../introduction.html">Demo</a>
+      </li>
+      <li class="list-group-item">
+        <a class="nav-link" href="../introduction.html">Installation</a>
+      </li>
+      <li class="list-group-item">
+        <a class="nav-link" href="../introduction.html">Team</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="codediv">
+	<h1>Installation Guides</h1>
+	<h2>Installing Flask on Current Ubuntu</h2>
+
+	<div class="instruction">This guide will show you how to install Flask on an Ubuntu system. For reference, the Ubuntu version used to host this project is 18.04.<br><br>The first step is to ensure you have Python 3 installed on your system. To check this you can use the following command:</div>
+	<pre>python3 -V</pre>
+	<div class="instruction">This should output something to the effect of:</div>
+	<pre>Python 3.6.6</pre>
+	<div class="instruction">If it does not, stop here and first install Python 3.<br><br>The next step is to install support for Python 3 virtual environemnts. This is done by running:</div>
+	<pre>sudo apt install python3-venv</pre>
+	<div class="instruction">To then create a virtual environment, make a new directory and then use a shell command to make a new virtual environment like so:</div>
+	<pre>mkdir my_app
+cd my_app
+python3 -m venv venv</pre>
+	<div class="instruction">To then make this virtual environment active, you must enter run:</div>
+	<pre>source venv/bin/activate</pre>
+	<div class="instruction">Your terminal prompt will now be prepended by:</div>
+	<pre>(venv) $</pre>
+	<div class="instruction">Now its finally time to install Flask! To do so run:</div>
+	<pre>pip install Flask</pre>
+	<div class="instruction">Flask should now be successfully installed on your system. To confirm, you may run:</div>
+	<pre>python -m flask --version</pre>
+	<div class="instruction">Which should return...</div>
+	<pre>Flask X.X.X
+Python X.X.X</pre>
+	<div class="instruction">as well as some additional information.</div>
+
+
+
+</div>
+
+</body>
+</html>
