@@ -16,6 +16,15 @@ html{
 color:black;
 }
 
+.list-group li a:hover{
+color:blue;
+text-decoration: underline;
+}
+
+.list-group-item.active a{
+color:white;
+}
+
 /*-------------------------------------------------------------- */
 /*index.html*/
 /*anchor*/
@@ -94,16 +103,15 @@ text-align: center;
 /* installation */
 
 .codediv {
-  width: 800px;
-  margin: 0 auto;
   color: #fff;
+  padding:20px;
 }
 
 .instruction {
   padding: 0.5em 0.5em;
 }
 
-pre {
+.code_outline {
   text-align: left;
   color: #fff;
   background-color: #555;
@@ -112,4 +120,13 @@ pre {
   font-size: 14px;
   padding: 0.5em 0.5em;
   border-left: 4px solid #8f8;
+}
+
+.flask_installation{
+padding-top:10px;
+padding-bottom:10px;
+}
+.react_installion{
+  padding-top:10px;
+  padding-bottom:10px;
 }
