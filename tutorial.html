@@ -74,13 +74,14 @@
 		<br><br>The routes.py module should exist in the same package as __init__.py and contain the following:
 		</div>
         <p class="code_outline">from myapp import myapp<br>from flask import render_template<br>@myapp.route('/')<br>@myapp.route('/index')<br>def index():<br>&emsp;return render_template("index.html")</p>
-        <div class="instruction">The myapp Flask application instance is imported from the package and the "render_template" function using the Jinja2 template engine will be imported from flask to convert templates into HTML pages. The @myapp.route lines are function decorators- a Python feature that modifies functions that follow. In this case, the @myapp.route decorator associates its argument (URLs) with the corresponding function. So when the URLs are requested from our application,
+        <div class="instruction">The myapp Flask application instance is imported from the package and the "render_template" function using the Jinja2 template engine, will be imported from flask to convert templates into HTML pages. The @myapp.route lines are function decorators- a Python feature that modifies functions that follow. In this case, the @myapp.route decorator associates its argument (URLs) with the corresponding function. So when the URLs are requested from our application,
 		the functions will be called by Flask and a value returned to the browser sending the request. Both routes ("/" and "/index") are associated with the single view function in our module.<br> At the top level of our project above the package we've just created
 		Python is required to define the instance of the Flask application. In a script named project.py, we can use a single line to import the instance of the Flask application:</div>
         <p class="code_outline">from myapp import myapp</p>
         <div class="instruction">The application is complete, but we need an "index.html" file to render as called in our routes.py module. In the myapp app package create a folder named "templates" and create an HTML file named "index.html".</div>
 		<p class="code_outline">cd myapp<br>mkdir templates<br>nano index.html</p>
-		<div class="instruction">The flask framework defaults to searching for HTML template files in the templates folder.</div>
+		<div class="instruction">The flask framework defaults to searching for HTML template files in the templates folder. The purpose of templates is to seperate the application logic from the web page presentation. In Flask the templates folder
+		stores individual template files and should exist within the application package (e.g., myapp/templates/index.html).</div>
       </div>
 
 
