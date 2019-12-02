@@ -144,7 +144,7 @@ const FlaskLink = () =>
   <>
   <br></br>
   <div>
-  <a href="./installation.html">Flask Demo</a>
+  <a href="http://138.197.163.191:5000/">Flask Demo</a>
   </div>
   </>;
 
