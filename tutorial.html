@@ -60,6 +60,90 @@
 
   <div class="container">
     <div class="codediv">
+
+
+
+  <div class="react_tutorial">
+
+    <h2>Creating a React Application</h2>
+    <p>Step 1: Add a dom container on the html page that you want to add react.js in. Give it a unique id html attribute as we will be using it to display our react components.</p>
+    <textarea wrap="off" style="width: 600px; height: 110px; background:  #555; color:white;   font-family: monospace; font-size: 14px; resize: none">
+<!--existing HTML-->
+&lt;div id="like_button_container">&lt;/div>
+<!--existing HTML-->
+    </textarea>
+    <p>Step 2: On the same html page, Add the script tags on the page. First two tags will load react, while the third one will load component code.</p>
+    <textarea wrap="off" style="width: 670px; height: 210px; background:  #555; color:white;  font-family: monospace; font-size: 14px; resize: none">
+<!--React CDN-->
+&lt; crossorigin src="https://unpkg.com/react@16/umd/react.development.js">&lt;/script>
+&lt; crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">&lt;/script>
+
+<!-- Load our React component. -->
+&lt;script src="like_button.js">&lt;/script>
+    </textarea>
+    <p>Step 3: You can now create the react component in the js file. You can add text, iamges and styles and it will looking something like this: </p>
+    <textarea wrap="off" style="width: 670px; height: 500px; background:  #555; color:white; font-family: monospace; font-size: 14px; resize: none">
+      'use strict';
+
+      const e = React.createElement;
+
+      class LikeButton extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { liked: false };
+        }
+
+        render() {
+          if (this.state.liked) {
+            return 'You liked this.';
+          }
+
+          return e(
+            'button',
+            { onClick: () => this.setState({ liked: true }) },
+            'Like'
+          );
+        }
+      }
+
+      const domContainer = document.querySelector('#like_button_container');
+      ReactDOM.render(e(LikeButton), domContainer);
+
+      class App extends React.Component{
+        state = {
+          name:'Ryu',
+          age: 30
+        }
+
+        //at least one function
+        render(){
+          return(
+            <div className="app-content">
+              <h1>Fancy yoooooooo</h1>
+              <p>My name is {this.state.name} and I am {this.state.age} </p>
+            </div>
+          );
+
+        }
+      }
+
+      //JSX format.
+      ReactDOM.render(<App />, document.querySelector('#app'));
+    </textarea>
+    <p>Step 4: Add JSX to your code as it helps in writing UI code for demonstration purposes. Add the script tag to your page:</p>
+    <textarea wrap="off" style="width: 670px; height: 100px; background:  #555; color:white;  font-family: monospace; font-size: 14px; resize: none">
+<!--React CDN-->
+&lt;script src="https://unpkg.com/babel-standalone@6/babel.min.js">&lt;/script>
+    </textarea>
+  </br>
+  <p>Add this after the div element of where you are running the component, and add the js file as the value for the src attribute:</p>
+
+  <textarea wrap="off" style="width: 670px; height: 100px; background:  #555; color:white;  font-family: monospace; font-size: 14px; resize: none">
+&lt;script type="text/babel" src="index.js">&lt;/script>
+  </textarea>
+
+  </div>
+</br>
 	<div class="flask_installation">
         <h2>Creating a Flask Web Application</h2>
 
@@ -82,15 +166,15 @@
 		</div>
 		<p class="code_outline">cd myapp<br>mkdir templates<br>nano index.html</p>
 		<div class="instruction">The flask framework defaults to searching for HTML template files in the templates folder. The purpose of templates is to seperate the application logic from the web page presentation. In Flask the templates folder
-		stores individual template files and should exist within the application package (e.g., myapp/templates/index.html).<br><br>We now have the boilerplate structure to run our very simple web application. To run, Flask must be told how to import the 
+		stores individual template files and should exist within the application package (e.g., myapp/templates/index.html).<br><br>We now have the boilerplate structure to run our very simple web application. To run, Flask must be told how to import the
 		application; this is done by setting the FLASK_APP environment variable to the script defining the application instance. The flask command can then be used to run the application
 		</div>
 		<p class="code_outline">export FLASK_APP=project.py<br>flask run</p>
 		<div class="instruction">The output should indicate that the server is running on a given IP address, which will be your own computer's localhost and usually on the available port 5000.
-		You can navigate to the webpage from a browser with the URL: "http://localhost:5000/". Hitting Ctrl-C from the terminal you're using will close the connection. Web pages with much more complex structures can be generated using 
+		You can navigate to the webpage from a browser with the URL: "http://localhost:5000/". Hitting Ctrl-C from the terminal you're using will close the connection. Web pages with much more complex structures can be generated using
 		dynamic components for example through the Jinja2 template engine and various plugins (e.g., WTForms or the SQLAlchemy ORM). In our demo page, the SQLAlchemy ORM allows the application to manipulate the SQLLite database with
-		high-level methods. These methods/operations are translates to database commands by the ORM. Flask intrinsically doesn't support databases, allowing developers to choose their own extensions; it supports both relational and non-relational databases. 
-		<br><br>The deployment of the web application to cloud services consists of transferring the project files to a web server. The external hosts allow the servers to handle administrative tasks and make the website available to anyone 
+		high-level methods. These methods/operations are translates to database commands by the ORM. Flask intrinsically doesn't support databases, allowing developers to choose their own extensions; it supports both relational and non-relational databases.
+		<br><br>The deployment of the web application to cloud services consists of transferring the project files to a web server. The external hosts allow the servers to handle administrative tasks and make the website available to anyone
 		through a public URL.
 		</div>
     </div>
