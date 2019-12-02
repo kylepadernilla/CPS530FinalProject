@@ -176,7 +176,7 @@ Summary
   </div>
 </div>
 </div>
-</>;
+</>
 ReactDOM.render(
     <Application/>,
     document.getElementById('root')
